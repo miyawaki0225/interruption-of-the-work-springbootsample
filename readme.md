@@ -23,11 +23,16 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 - 章ごとにbranch切ってみる。
 
 
-- 0706
-- 0707
-- 0708
-- 0709
-- 0710
+0706
+- （未解決）UbutuにMySQL入れて起動せず。＞＞　windowsで起動
+  https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-ja
+
+- （解決）JDBCエラーが起きて起動できなかった。＞＞application.ymlの中身を書いていなかった。
+
+0707
+0708
+0709
+0710
 
 
 
