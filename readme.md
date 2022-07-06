@@ -52,6 +52,15 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 |@GetMapping|GETメソッドのリクエストを受け付ける。|
 |@PostMapping|POSTメソッドのリクエストを受け付ける。|
 |@RequestParam|入力された値をサーバーが取得する方法の内ひとつ|
+|@Repository|DB操作を表すリポジトリにつける|
+|@Autowired|DI用|
+
+- JdbcTemplateクラス：
+
+lombok
+|||
+|---|---|
+|@Data|getter,setter,toString,hashCode,equals|
 
 - th:属性の値に${キー名}でModelクラスから値取得
 
