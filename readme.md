@@ -17,6 +17,18 @@ IDE:vscode
 メモ：アーティファクトIDは小文字だけ？
 https://spring.pleiades.io/initializr/docs/current/reference/html/
 
+## 進め方
+1,2章は環境構築なのでVSCodeとMySQLに合わせる。
+第3章からgit管理。7/10までに回し終える。
+
+- 0706
+- 0707
+- 0708
+- 0709
+- 0710
+
+
+
 ## 1 章 Spring の 概要  
  1. 1 Spring とは
  1. 1. 1 フレーム ワーク とは 何 か？ 
