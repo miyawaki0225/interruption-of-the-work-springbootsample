@@ -45,6 +45,16 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 2. 1 通常 の eclipse 2. 2 Spring 用 の eclipse を インストール する … STS 2. 2. 1 STS の インストール 2. 2. 2 STS の 日本語 化 2. 3 Lombok の インストール 2. 4 プロジェクト の 作成 2. 4. 1 プロジェクト 作成 
 
 ## 3 章 HelloWorld… 簡単 な サンプル 
+初歩文法
+|||
+|---|---|
+|@Controller|画面からリクエストを受けるクラス。コントローラー|
+|@GetMapping|GETメソッドのリクエストを受け付ける。|
+|@PostMapping|POSTメソッドのリクエストを受け付ける。|
+|@RequestParam|入力された値をサーバーが取得する方法の内ひとつ|
+
+- th:属性の値に${キー名}でModelクラスから値取得
+
 3. 1 HTML の 表示 3. 2 画面 から 別 画面 に 値 を 渡す 3. 3 データベース から 値 を 取得 する 
 
 ## 4 章 Web アプリケーション の 概要 
