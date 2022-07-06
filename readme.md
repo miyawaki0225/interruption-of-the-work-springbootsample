@@ -18,8 +18,10 @@ IDE:vscode
 https://spring.pleiades.io/initializr/docs/current/reference/html/
 
 ## 進め方
-1,2章は環境構築なのでVSCodeとMySQLに合わせる。
+- 1,2章は環境構築なのでVSCodeとMySQLに合わせる。
 第3章からgit管理。7/10までに回し終える。
+- 章ごとにbranch切ってみる。
+
 
 - 0706
 - 0707
