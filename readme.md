@@ -30,6 +30,25 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 - （解決）JDBCエラーが起きて起動できなかった。＞＞application.ymlの中身を書いていなかった。
 
 0707
+- VSCodeからgit push出来なくなった問題。＞＞configにgmailが２つ
+- ssh
+- 4章はWebアプリの仕組み
+- 5章　DI！は依存性（オブジェクト）の注入のこと
+
+### DIとは
+- インターフェースにインスタンスを自動で代入
+- インスタンスの生成と破棄をしてくれる
+- インスタンスのスコープ管理ができる
+
+### DIの実装
+@Autowiredアノテーション（フィールド、コンストラクタ、setter）
+
+### DIの落とし穴
+- singletonスコープ
+- 異なるスコープのBeanをフィールドに持つと、インスタンスが破棄されない
+- Bean以外からはDIできない
+
+
 0708
 0709
 0710
@@ -68,6 +87,59 @@ lombok
 
 ## 4 章 Web アプリケーション の 概要 
 ## 5 章 Dependency Injection( 依存 性 の 注入) 
+DIの処理
+1. DIの対象クラスを探す
+2. @Autowiredアノテーションがついている個所に、インスタンスを注入。
+
+下記がDIのコンポねーとスキャンの対象
+- @Component
+- @Controller
+- @Service 
+- @Repository 
+- @Configuration 
+- @RestController 
+- @ControllerAdvice 
+- @ManagedBean 
+- @Named
+- @Mapper
+- @Bean
+
+### @Scopeでライフサイクル管理
+スコープとは、インスタンスが生存する期間のことです。例えば、リクエストスコープではHTTPのリクエストが送られてくるたびにインスタンスが生成されます。そして、リクエストの処理が終わったらインスタンスが破棄されます。
+
+
+|スコープ|説明|
+|---|---|
+|singleton(デフォルト)	|DIコンテナの起動時にBeanのインスタンスを生成し、同一のインスタンスを共有して利用する。スコープを設定しない場合はsingletonとして扱われる。|
+|prototype	|Beanの取得時に毎回インスタンスを生成する。スレッドアンセーフなBeanの場合、singletonスコープを利用できないためprototypeを利用する。|
+|session	|HTTPのセッション単位でBeanのインスタンスを生成する。Webアプリケーションの場合のみ有効。|
+|request	|HTTPのリクエスト単位でBeanのインスタンスを生成する。Webアプリケーションの場合のみ有効。|
+|globalSession	|ポートレット環境におけるGlobalSessionの単位でインスタンスを生成する。ポートレットに対応したWebアプリケーションの場合のみ有効。|
+|application	|サーブレットのコンテキスト単位でBeanのインスタンスを生成する。Webアプリケーションの場合のみ有効。|
+|カスタムスコープ(独自の命名)	|独自に定義したルールでBeanのインスタンスを生成する。|
+
+DIの実装（@Autowired）
+- フィールド
+- コンストラクタ（@Autowiredを省略できる）
+- setter
+
+よく使うアノテーション
+- @Component
+- @Controller
+- @Service
+- @Repository
+- @Bean
+- @Mapper
+
+
+流れ：クラスにアノテーションをつけてDIコンテナにBeanを登録
+Beanのインスタンスを生成するクラス：JavaConfig
+
+### DIの落とし穴
+1. singletonスコープ（デフォルトがsingletonになるので複数からアクセスされる場合は注意）
+2. 異なるスコープをフィールドに持つとインスタンスが破棄されない場合がある。
+3. Bean以外からはDIできない
+
 5. 1 DI( 依存 性 の 注入) とは 何 か? 5. 1. 1 依存 性 の 注入 5. 1. 2 インスタンス の ライフサイクル 管理 5. 2 DI の 実装 方法 5. 2. 1 依存 性 の 注入 方法5. 2. 2 Bean の 登録 方法 5. 3 DI の 落とし穴 5. 3. 1 singleton スコープ 5. 3. 2 異なる スコープ 5. 3. 3 Bean 以外 からは DI でき ない 
 
 ## 6 章 バインド＆ バリデーション( 入力 チェック) 
