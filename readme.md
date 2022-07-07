@@ -34,6 +34,7 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 - ssh
 - 4章はWebアプリの仕組み
 - 5章　DI！は依存性（オブジェクト）の注入のこと
+- 6章　webjar
 
 ### DIとは
 - インターフェースにインスタンスを自動で代入
@@ -48,6 +49,10 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 - 異なるスコープのBeanをフィールドに持つと、インスタンスが破棄されない
 - Bean以外からはDIできない
 
+
+- 404エラーが起きた時にチェックする項目
+部品のスキャン対象はメインのクラスが属するパッケージ  
+https://rainbow-engine.com/java-spring-boot-404error-fix/
 
 0708
 0709
@@ -143,6 +148,23 @@ Beanのインスタンスを生成するクラス：JavaConfig
 5. 1 DI( 依存 性 の 注入) とは 何 か? 5. 1. 1 依存 性 の 注入 5. 1. 2 インスタンス の ライフサイクル 管理 5. 2 DI の 実装 方法 5. 2. 1 依存 性 の 注入 方法5. 2. 2 Bean の 登録 方法 5. 3 DI の 落とし穴 5. 3. 1 singleton スコープ 5. 3. 2 異なる スコープ 5. 3. 3 Bean 以外 からは DI でき ない 
 
 ## 6 章 バインド＆ バリデーション( 入力 チェック) 
+
+- @RequestMappingをクラスにつけるとURLのプリフィックスとして利用出来る。
+- @GetMapping("/signup")
+
+@GetMappingの代用
+```java
+@RequestMapping(value="/sample",method=RequestMethod.GET)
+public String getSample(){
+  //略
+}
+```
+### PRG(POST-Redirect-GET)パターン
+POSTメソッド＞リダイレクト＞画面遷移（GETメソッド）  
+メリット：誤登録防止
+
+- JS読み込み時は、defer必須：画面読み込みが改善
+
 6. 1 画面 作成 6. 1. 1 ライブラリ の 使用… webjars 6. 1. 2 メッセージプロパティ 6. 1. 3 多 言語 化 6. 2 バインド 6. 2. 1 バインド 6. 2. 2 エラーメッセージ の 編集 6. 3 バリデーション 6. 3. 1 バリデーション の 実装 6. 3. 2 エラーメッセージ の 編集 6. 3. 3 バリデーション の 実行 順序 の 設定 
 
 ## 7 章 画面 レイアウト 7. 1 画面 レイアウト の 実装 
