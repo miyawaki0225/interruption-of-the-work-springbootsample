@@ -54,6 +54,8 @@ https://spring.pleiades.io/initializr/docs/current/reference/html/
 部品のスキャン対象はメインのクラスが属するパッケージ  
 https://rainbow-engine.com/java-spring-boot-404error-fix/
 
+- ローカライズはymlファイルにすると上手くいかなかった
+
 0708
 0709
 0710
