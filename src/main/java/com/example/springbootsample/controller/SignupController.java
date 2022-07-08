@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.springbootsample.application.service.UserApplicationService;
+import com.example.springbootsample.form.GroupOrder;
 import com.example.springbootsample.form.SignupForm;
 
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +36,7 @@ public class SignupController {
     /* ユーザー登録処理 */
     @PostMapping("signup")
     public String postSignup(Model model,Locale locale,
-    @ModelAttribute @Validated SignupForm form,
+    @ModelAttribute @Validated(GroupOrder.class) SignupForm form,
     BindingResult bindingResult){          
         if(bindingResult.hasErrors()){
             return getSignup(model,locale,form);
