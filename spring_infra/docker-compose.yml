@@ -1,0 +1,17 @@
+# versionは3系が最新版で、versionによって書き方が異なる
+version: "3.3"
+services:
+  mysql:
+    image: mysql:8.0.18 # イメージの名前
+    container_name: spring_sample_mysql
+    volumes:
+      - ./mysql/db:/docker-entrypoint-initdb.d  #初期データをマウントする場所
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: spring_sample
+      MYSQL_USER: miyawaki
+      MYSQL_PASSWORD: miyawaki
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - 3306:3306

@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/mysql
+    url: jdbc:mysql://172.29.186.104:3306/mysql
     username: root
-    password: test
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   sql:
     init:
-      mode: never
+      mode: always
       schema-locations: classpath:schema.sql
       data-locations: classpath:data.sql
       encoding: utf-8
