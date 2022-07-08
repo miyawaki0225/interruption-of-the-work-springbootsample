@@ -59,6 +59,8 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 0708
 - バインド（入力内容とクラスをマッピング）
 - dockeでMySQLのイメージ作って読み込めた！
+- バリデーションアノテーションたくさんある
+
 
 0709
 0710
@@ -167,8 +169,27 @@ public String getSample(){
 ### PRG(POST-Redirect-GET)パターン
 POSTメソッド＞リダイレクト＞画面遷移（GETメソッド）  
 メリット：誤登録防止
-
 - JS読み込み時は、defer必須：画面読み込みが改善
+
+
+Bean Validation
+
+||||
+|---|---|---|
+|@NotNull|||
+|@NotEmpty|null,空でないことの✓||
+|@NotBlank|null,空文字,空白出ないことをチェック||
+|@Max|||
+|@Min|||
+|@Size|ListやCollectionのサイズ✓|@Size(min=0,max=20)|
+|@AssertTrue|||
+|@AssertFalse|||
+|@Pattern|||
+|@Email|||
+|@Range|||
+|@Length|文字列の長さ✓||
+|@CreditCardNumber|||
+|@URL|||
 
 6. 1 画面 作成 6. 1. 1 ライブラリ の 使用… webjars 6. 1. 2 メッセージプロパティ 6. 1. 3 多 言語 化 6. 2 バインド 6. 2. 1 バインド 6. 2. 2 エラーメッセージ の 編集 6. 3 バリデーション 6. 3. 1 バリデーション の 実装 6. 3. 2 エラーメッセージ の 編集 6. 3. 3 バリデーション の 実行 順序 の 設定 
 
