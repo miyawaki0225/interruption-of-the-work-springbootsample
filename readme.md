@@ -58,6 +58,7 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 
 0708
 - バインド（入力内容とクラスをマッピング）
+- dockeでMySQLのイメージ作って読み込めた！
 
 0709
 0710
