@@ -60,7 +60,7 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 - バインド（入力内容とクラスをマッピング）
 - dockeでMySQLのイメージ作って読み込めた！
 - バリデーションアノテーションたくさんある
-
+- バリデーションの順番を設定できる
 
 0709
 0710
