@@ -57,6 +57,8 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 - ローカライズはymlファイルにすると上手くいかなかった
 
 0708
+- バインド（入力内容とクラスをマッピング）
+
 0709
 0710
 
