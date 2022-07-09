@@ -63,6 +63,7 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 - バリデーションの順番を設定できる
 
 0709
+- layout:replaceとlayout:fragmentの違い
 0710
 
 
@@ -194,6 +195,11 @@ Bean Validation
 6. 1 画面 作成 6. 1. 1 ライブラリ の 使用… webjars 6. 1. 2 メッセージプロパティ 6. 1. 3 多 言語 化 6. 2 バインド 6. 2. 1 バインド 6. 2. 2 エラーメッセージ の 編集 6. 3 バリデーション 6. 3. 1 バリデーション の 実装 6. 3. 2 エラーメッセージ の 編集 6. 3. 3 バリデーション の 実行 順序 の 設定 
 
 ## 7 章 画面 レイアウト 7. 1 画面 レイアウト の 実装 
+
+layout:replaceとlayout:fragmentの違い
+- layout:replaceはタグをまるごと入れ替える
+- layout:fragmentはタグ内にHTMLを追加する
+
 ## 8 章 MyBatis 
 8. 1 MyBatis の 概要 8. 2 MyBatis 基本 編 8. 2. 1 insert 8. 2. 2 select… 複数 件 8. 2. 3 select… 1 件 8. 2. 4 update・delete 8. 3 MyBatis 応用 編 8. 3. 1 動的 SQL 8. 3. 2 ネスト し た オブジェクト への マッピング 8. 3. 3 テーブル 結合( 一対多) 8. 4 トランザクション 8. 4. 1 トランザクション の 種類 8. 4. 2 トランザクション の 実装 8. 4. 3 宣言 的 トランザクション の 設定 
 
