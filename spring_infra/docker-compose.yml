@@ -12,6 +12,5 @@ services:
       MYSQL_USER: miyawaki
       MYSQL_PASSWORD: miyawaki
       TZ: 'Asia/Tokyo'
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     ports:
       - 3306:3306

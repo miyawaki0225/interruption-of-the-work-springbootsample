@@ -35,6 +35,10 @@ public class SignupController {
     @Autowired
     private ModelMapper modelMapper;
 
+    public SignupController(UserApplicationService userApplicationService) {
+        this.userApplicationService = userApplicationService;
+    }
+
     @GetMapping("/signup")
     public String getSignup(Model model,Locale locale,@ModelAttribute SignupForm form){
         Map<String, Integer>genderMap = userApplicationService.getGenderMap(locale);
@@ -43,7 +47,7 @@ public class SignupController {
     }
 
     /* ユーザー登録処理 */
-    @PostMapping("signup")
+    @PostMapping("/signup")
     public String postSignup(Model model,Locale locale,
     @ModelAttribute @Validated(GroupOrder.class) SignupForm form,
     BindingResult bindingResult){          
