@@ -64,6 +64,10 @@ https://rainbow-engine.com/java-spring-boot-404error-fix/
 
 0709
 - layout:replaceとlayout:fragmentの違い
+- MyBatis
+- [lombok](https://penguinlabo.hatenablog.com/entry/java/lombok/list)
+
+
 0710
 
 
@@ -201,6 +205,38 @@ layout:replaceとlayout:fragmentの違い
 - layout:fragmentはタグ内にHTMLを追加する
 
 ## 8 章 MyBatis 
+lombok
+
+|アノテーション	|指定場所	|作用|
+|---|---|---|
+|@Getter	|クラス フィールド	|デフォルトのゲッターメソッドを自動生成します。|
+|@Setter	|クラス フィールド	|デフォルトのセッターメソッドを自動生成します。|
+|@NoArgsConstructor	|クラス	|引数なしのコンストラクタを自動生成します。|
+|@RequiredArgsConstructor	|クラス	|finalフィールドを引数で初期化するコンストラクタ、ファクトリメソッドを自動生成します。|
+|@AllArgsConstructor	|クラス	|すべてのフィールドを引数で初期化するコンストラクタ、ファクトリメソッドを自動生成します。|
+|@EqualsAndHashCode	|クラス	|すべてのフィールドを使用してequalsメソッドとhashCodeメソッドを自動生成します。|
+|@ToString	|クラス	|すべてのフィールドを1つの文字列表現に変換するtoStringメソッドを自動生成します。|
+|@Data	|クラス	|クラスに@Getter、@Setter、@RequiredArgsConstructor、@EqualsAndHashCode、@ToStringを指定したことと同じ作用になります。|
+|@Value	|クラス	|不変クラスを作成します。クラスと全てのフィールドがfinalで修飾され、@Getter、@RequiredArgsConstructor、@EqualsAndHashCode、@ToStringを指定したことと同じ作用になります。|
+|@Builder	|クラス	|すべてのフィールドを引数で初期化するコンストラクタと、ビルダーパターンによる値の初期化のためのメソッド、ビルダークラスを自動生成します。|
+|@With	|フィールド	引数の値でフィールドを初期化した新しいオブジェクトを返すメソッドを自動生成します。不変クラスのセッターのようなメソッドを生成する機能です。|
+|@SneakyThrows	|メソッド	|メソッド内で発生する検査例外を非検査例外であるRuntimeExceptionにラップしてリスローするコードを自動生成します。|
+|@Synchronized	|メソッド |メソッド全体をsynchronizedブロックで囲むコードと、synchronizedで使用するロックオブジェクトの宣言を自動生成します。|
+|@NonNull	|フィールド
+引数	|指定したフィールド、引数にnullを指定すると、NullPointerExceptionをスローするコードを自動生成します。|
+|@Cleanup	|変数	|I/O系などのclose処理が必要な変数に指定することで、finallyでclose処理を呼び出すtryブロックで囲むコードを自動生成します。|
+|@Log	|クラス	|Java標準Loggerのロガーインスタンスを保持するフィールドを自動生成します。|
+|@CommonsLog |クラス	|Apache Commons Loggingのロガーインスタンスを保持するフィールドを自動生成します。|
+|@Flogger |クラス	|Fluent Loggerのロガーインスタンスを保持するフィールドを自動生成します。|
+|@JBossLog |クラス	|JBoss Loggingのロガーインスタンスを保持するフィールドを自動生成します。|
+|@Log4j	|クラス	|Apache log4jのロガーインスタンスを保持するフィールドを自動生成します。|
+|@Log4j2 |クラス	|Apache Log4j 2のロガーインスタンスを保持するフィールドを自動生成します。|
+|@Slf4j	|クラス	|SLF4Jのロガーインスタンスを保持するフィールドを自動生成します。|
+|@XSlf4j |クラス	|SLF4Jの拡張ロガー(XLogger)インスタンスを保持するフィールドを自動生成します。|
+|@CustomLog |クラス	|Lombokの設定ファイルで指定されたロガーインスタンスを保持するフィールドを自動生成します。|
+
+
+
 8. 1 MyBatis の 概要 8. 2 MyBatis 基本 編 8. 2. 1 insert 8. 2. 2 select… 複数 件 8. 2. 3 select… 1 件 8. 2. 4 update・delete 8. 3 MyBatis 応用 編 8. 3. 1 動的 SQL 8. 3. 2 ネスト し た オブジェクト への マッピング 8. 3. 3 テーブル 結合( 一対多) 8. 4 トランザクション 8. 4. 1 トランザクション の 種類 8. 4. 2 トランザクション の 実装 8. 4. 3 宣言 的 トランザクション の 設定 
 
 ## 9 章 AOP 
